@@ -14,46 +14,46 @@ body {
     margin-top: 80px;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background-color: #272829;
     width: 350px;
     height: 400px;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .title {
     color: #FFF6E0;
-    margin-top: 50px;
-    margin-bottom: 40px;
     font-family: 'Gabarito', sans-serif;
     font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 12px;
 }
 
 .inputs {
+    /* border: 2px solid red; */
     width: 100%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
-.emailOrUserParent {
-    width: 80%;
-}
-
-.emailOrUser {
-    color: white;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 5px;
+.email, .user {
     outline: none;
-    width: 100%;
-    height: 40px;
+    color: white;
+    width: 80%;
+    border: 2px solid white;
+    background-color: transparent;
     padding-left: 10px;
-    margin-bottom: 20px;
+    height: 32px;
+    border-radius: 5px;
 }
 
-.passwordParent {
+.passwordParent, .repeatPasswordParent{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -63,48 +63,48 @@ body {
     border-radius: 5px;
 }
 
-.password {
+.password, .repeatPassword {
     color:  white;
     background-color: transparent;
     width: 88%;
     border: none;
     outline: none;
-    height: 40px;
+    height: 32px;
     padding-left: 10px;
     padding-right: 80px;
 
 }
 
-span.material-symbols-outlined.eye {
+span.material-symbols-outlined.eye1, span.material-symbols-outlined.eye2 {
     color: rgb(255, 255, 255, 0.5);
     cursor: pointer;
 }
 
-span.material-symbols-outlined.eye::selection {
+span.material-symbols-outlined.eye1::selection, span.material-symbols-outlined.eye2::selection {
     background-color: transparent;
 }
 
 .alerts {
-    margin-top: 12px;
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: start;
+    margin-bottom: 12px;
 }
 
-p {
+p, a{
     color: #FFF6E0;
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
+
 }
 
-a {
-    color: white;
+a::selection{
+    background-color: transparent;
 }
 
-input.login {
+input.register {
     padding-left: 0;
-    margin-top: 32px;
     border: none;
     border-radius: 12px;
     height: 30px;
@@ -115,12 +115,12 @@ input.login {
     font-weight: bold;
 }
 
-input.login:hover {
+input.register:hover {
     opacity: 0.5;
     transition: opacity 0.2s ease-in-out;
     cursor: pointer;
 }
 
-input.login:active {
+input.register:active {
     opacity: 0.2;
 }

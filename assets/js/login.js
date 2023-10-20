@@ -1,9 +1,9 @@
-let admin = {
-    user: 'admin',
-    email:'admin@gmail.com',
-    password: 'tomate'
-}
-let logins = [admin]
+// let admin = {
+//     user: 'admin',
+//     email:'admin@gmail.com',
+//     password: 'tomate'
+// }
+// let logins = [admin]
 
 let page = document.querySelector('body')
 
@@ -18,37 +18,39 @@ let pass_valid = false
 
 let loginButtom = document.querySelector('.login')
 
-localStorage.setItem('logins', JSON.stringify(logins))
+// localStorage.setItem('logins', JSON.stringify(logins))
 
 const login = () => {
     let eOrU = emailOrUser.value
     let pass = password.value
+    let valid = false
 
     dataBase = JSON.parse(localStorage.getItem('logins'))
 
     for (const data in dataBase) {
         if ((dataBase[data].user === eOrU || dataBase[data].email === eOrU)&&( dataBase[data].password === pass)) {
-            alert('worked')
-            console.log('worked')
-            console.log(eOrU)
 
+            valid = true
             emailOrUser.style.border = '2px solid white'
             emailOrUser.value=''
             passwordParent.style.border = '2px solid white'
             password.value =''
-        } else {
-            alert('Fail')
-            console.log('fail')
-            console.log(eOrU)
         }
     }
+
+    if (valid) {
+        alert('WORKED')
+    } else {
+        alert('ERROR')
+    }
+
 }
 
 const lostPassword = () => {
     alert('You lost the password')
 }
 
-eye.addEventListener('click', () =>{
+eye.addEventListener('click', () => {
     if (password.type == 'password'){
         password.type = 'text'
         eye.innerHTML = 'visibility_off'

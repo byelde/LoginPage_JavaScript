@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Ubuntu:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+    </style>
+    <title>RegisterPage</title>
+</head>
+
+<body>
+    <div class="card">
+
+        <h1 class="title">Register</h1>
+
+        <div class="inputs">
+
+            <input type="text" class="email" id="email" placeholder="Email">
+
+            <input type="text" class="user" id="user" placeholder="User">
+
+            <div class="passwordParent">
+                <input type="password" class="password" id="password" placeholder="Password">
+                <span class="material-symbols-outlined eye1">visibility</span>
+
+            </div>
+            
+            <div class="repeatPasswordParent">
+                <input type="password" class="repeatPassword" id="repestPassword" placeholder="Repeat Password">
+                <span class="material-symbols-outlined eye2">visibility</span>
+            </div>
+
+            <div class="alerts">
+    
+                <p class="creaetAccount">Already have a account? <a href="http://127.0.0.1:5500/assets/pages/login.html" onclick="registerPage()">Sign in</a></p>
+    
+            </div>
+        </div>
+
+
+        <div class="buttoms">
+
+            <input class="register" disabled="true" type="button" value="Register">
+
+        </div>
+
+    </div>
+</body>
+<script src="../js/register.js"></script>
+
+</html>
