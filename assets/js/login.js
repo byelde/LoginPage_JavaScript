@@ -1,10 +1,3 @@
-// let admin = {
-//     user: 'admin',
-//     email:'admin@gmail.com',
-//     password: 'tomate'
-// }
-// let logins = [admin]
-
 let page = document.querySelector('body')
 
 let emailOrUserParent = document.querySelector('.emailOrUserParent')
@@ -17,8 +10,6 @@ let eye = document.querySelector('.material-symbols-outlined.eye')
 let pass_valid = false
 
 let loginButtom = document.querySelector('.login')
-
-// localStorage.setItem('logins', JSON.stringify(logins))
 
 const login = () => {
     let eOrU = emailOrUser.value
