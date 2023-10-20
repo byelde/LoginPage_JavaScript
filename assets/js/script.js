@@ -64,7 +64,7 @@ emailOrUser.addEventListener('keyup', () => {
         emailOrUser.style.border = '2px solid white'
         eOrU_valid = false
 
-    } else if (emailOrUser.value.length <= 3) {
+    } else if (emailOrUser.value.length <= 3 || emailOrUser.value.search(' ') != -1) {
         emailOrUser.style.border = '2px solid red'
         eOrU_valid = false
 
@@ -80,7 +80,7 @@ password.addEventListener('keyup', () => {
         pass_valid = false
 
 
-    } else if (password.value.length < 4) {
+    } else if (password.value.length < 6 || password.value.search(' ') != -1) {
         passwordParent.style.border = '2px solid red'
         pass_valid = false
 
